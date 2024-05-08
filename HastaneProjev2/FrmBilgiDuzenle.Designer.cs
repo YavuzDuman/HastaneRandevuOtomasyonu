@@ -46,10 +46,10 @@
             // BtnGuncelle
             // 
             this.BtnGuncelle.Location = new System.Drawing.Point(202, 285);
-            this.BtnGuncelle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.BtnGuncelle.Name = "BtnGuncelle";
             this.BtnGuncelle.Size = new System.Drawing.Size(174, 41);
-            this.BtnGuncelle.TabIndex = 30;
+            this.BtnGuncelle.TabIndex = 7;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
             // 
@@ -57,10 +57,10 @@
             // 
             this.CmbCinsiyet.FormattingEnabled = true;
             this.CmbCinsiyet.Location = new System.Drawing.Point(167, 239);
-            this.CmbCinsiyet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CmbCinsiyet.Margin = new System.Windows.Forms.Padding(4);
             this.CmbCinsiyet.Name = "CmbCinsiyet";
             this.CmbCinsiyet.Size = new System.Drawing.Size(254, 32);
-            this.CmbCinsiyet.TabIndex = 29;
+            this.CmbCinsiyet.TabIndex = 6;
             // 
             // label6
             // 
@@ -79,7 +79,7 @@
             this.MskTelefon.Mask = "(999) 000-0000";
             this.MskTelefon.Name = "MskTelefon";
             this.MskTelefon.Size = new System.Drawing.Size(254, 32);
-            this.MskTelefon.TabIndex = 27;
+            this.MskTelefon.TabIndex = 4;
             // 
             // label5
             // 
@@ -97,7 +97,7 @@
             this.TxtSoyad.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.TxtSoyad.Name = "TxtSoyad";
             this.TxtSoyad.Size = new System.Drawing.Size(254, 32);
-            this.TxtSoyad.TabIndex = 25;
+            this.TxtSoyad.TabIndex = 2;
             // 
             // label4
             // 
@@ -115,7 +115,7 @@
             this.TxtAd.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.TxtAd.Name = "TxtAd";
             this.TxtAd.Size = new System.Drawing.Size(254, 32);
-            this.TxtAd.TabIndex = 23;
+            this.TxtAd.TabIndex = 1;
             // 
             // label1
             // 
@@ -133,7 +133,7 @@
             this.TxtSifre.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.TxtSifre.Name = "TxtSifre";
             this.TxtSifre.Size = new System.Drawing.Size(254, 32);
-            this.TxtSifre.TabIndex = 21;
+            this.TxtSifre.TabIndex = 5;
             // 
             // label3
             // 
@@ -152,7 +152,7 @@
             this.MskTC.Mask = "00000000000";
             this.MskTC.Name = "MskTC";
             this.MskTC.Size = new System.Drawing.Size(254, 32);
-            this.MskTC.TabIndex = 19;
+            this.MskTC.TabIndex = 3;
             this.MskTC.ValidatingType = typeof(int);
             // 
             // label2
@@ -167,6 +167,7 @@
             // 
             // FrmBilgiDuzenle
             // 
+            this.AcceptButton = this.BtnGuncelle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
@@ -185,9 +186,10 @@
             this.Controls.Add(this.MskTC);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmBilgiDuzenle";
             this.Text = "FrmBilgiDuzenle";
+            this.Load += new System.EventHandler(this.FrmBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

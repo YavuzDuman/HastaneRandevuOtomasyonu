@@ -34,6 +34,7 @@ namespace HastaneProjev2
             if(reader.Read())
             {
                 FrmHastaDetay fr = new FrmHastaDetay();
+                fr.tc = MskTC.Text;
                 fr.Show();
                 this.Hide();
             }
