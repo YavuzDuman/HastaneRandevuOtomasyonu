@@ -35,7 +35,7 @@ namespace HastaneProjev2
 
             // Randevu gecmisi
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from  Tbl_Randevular where HastaTC="+tc,bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("Select * from  Tbl_Randevu where HastaTC="+tc,bgl.baglanti());
             da.Fill(dt);
             dataGridView1.DataSource = dt;
 
@@ -65,7 +65,7 @@ namespace HastaneProjev2
         private void CmbDoktor_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("Select * from Tbl_Randevular where RandevuBrans='" + CmbBrans.Text+"'",bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("Select * from Tbl_Randevu where RandevuBrans='" + CmbBrans.Text+"'",bgl.baglanti());
             da.Fill(dt);
             dataGridView2.DataSource = dt;
         }
