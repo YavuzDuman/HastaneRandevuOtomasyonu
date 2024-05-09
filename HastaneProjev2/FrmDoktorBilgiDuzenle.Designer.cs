@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorBilgiDuzenle));
             this.TxtSoyad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtAd = new System.Windows.Forms.TextBox();
@@ -47,7 +48,7 @@
             this.TxtSoyad.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.TxtSoyad.Name = "TxtSoyad";
             this.TxtSoyad.Size = new System.Drawing.Size(225, 32);
-            this.TxtSoyad.TabIndex = 33;
+            this.TxtSoyad.TabIndex = 2;
             // 
             // label4
             // 
@@ -65,7 +66,7 @@
             this.TxtAd.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.TxtAd.Name = "TxtAd";
             this.TxtAd.Size = new System.Drawing.Size(225, 32);
-            this.TxtAd.TabIndex = 31;
+            this.TxtAd.TabIndex = 1;
             // 
             // label1
             // 
@@ -83,7 +84,7 @@
             this.TxtSifre.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.TxtSifre.Name = "TxtSifre";
             this.TxtSifre.Size = new System.Drawing.Size(225, 32);
-            this.TxtSifre.TabIndex = 29;
+            this.TxtSifre.TabIndex = 5;
             // 
             // label3
             // 
@@ -102,7 +103,7 @@
             this.MskTC.Mask = "00000000000";
             this.MskTC.Name = "MskTC";
             this.MskTC.Size = new System.Drawing.Size(225, 32);
-            this.MskTC.TabIndex = 27;
+            this.MskTC.TabIndex = 3;
             this.MskTC.ValidatingType = typeof(int);
             // 
             // label2
@@ -131,7 +132,7 @@
             this.CmbBrans.Location = new System.Drawing.Point(149, 155);
             this.CmbBrans.Name = "CmbBrans";
             this.CmbBrans.Size = new System.Drawing.Size(225, 32);
-            this.CmbBrans.TabIndex = 35;
+            this.CmbBrans.TabIndex = 4;
             // 
             // BtnGuncelle
             // 
@@ -139,14 +140,17 @@
             this.BtnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.BtnGuncelle.Name = "BtnGuncelle";
             this.BtnGuncelle.Size = new System.Drawing.Size(225, 41);
-            this.BtnGuncelle.TabIndex = 36;
+            this.BtnGuncelle.TabIndex = 6;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // FrmDoktorBilgiDuzenle
             // 
+            this.AcceptButton = this.BtnGuncelle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(410, 314);
             this.Controls.Add(this.BtnGuncelle);
@@ -161,9 +165,12 @@
             this.Controls.Add(this.MskTC);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "FrmDoktorBilgiDuzenle";
-            this.Text = "FrmDoktorBilgiDuzenle";
+            this.Text = "Doktor Bilgi Güncelle";
+            this.Load += new System.EventHandler(this.FrmDoktorBilgiDuzenle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

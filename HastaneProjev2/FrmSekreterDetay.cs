@@ -80,5 +80,38 @@ namespace HastaneProjev2
             }
             bgl.baglanti().Close();
         }
+
+        private void btnOlustur_Click(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand("insert into Tbl_Duyurular (Duyuru) values (@d1)",bgl.baglanti());
+            command.Parameters.AddWithValue("@d1",RchDuyuru.Text);
+            command.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Duyuru oluşturuldu.");
+        }
+
+        private void BtnDoktorPanel_Click(object sender, EventArgs e)
+        {
+            FrmDoktorPaneli frmDoktor = new FrmDoktorPaneli();
+            frmDoktor.Show();
+        }
+
+        private void BtnBransPanel_Click(object sender, EventArgs e)
+        {
+            FrmBransPaneli frm  =new FrmBransPaneli();
+            frm.Show();
+        }
+
+        private void BtnRandevuListe_Click(object sender, EventArgs e)
+        {
+            FrmRandevuListesi frm1 = new FrmRandevuListesi();
+            frm1.Show();
+        }
+
+        private void BtnDuyurular_Click(object sender, EventArgs e)
+        {
+            FrmDuyurular frm =new FrmDuyurular();
+            frm.Show();
+        }
     }
 }

@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHastaDetay));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.LblAdSoyad = new System.Windows.Forms.Label();
             this.LblTC = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.TxtId = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.LnkBilgiGuncelle = new System.Windows.Forms.LinkLabel();
             this.BtnRandevuAl = new System.Windows.Forms.Button();
             this.RchSikayet = new System.Windows.Forms.RichTextBox();
@@ -46,8 +49,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.TxtId = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -128,6 +129,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Randevu Paneli";
             // 
+            // TxtId
+            // 
+            this.TxtId.Enabled = false;
+            this.TxtId.Location = new System.Drawing.Point(86, 47);
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Size = new System.Drawing.Size(160, 32);
+            this.TxtId.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(48, 46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(31, 24);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Id:";
+            // 
             // LnkBilgiGuncelle
             // 
             this.LnkBilgiGuncelle.AutoSize = true;
@@ -147,6 +165,7 @@
             this.BtnRandevuAl.TabIndex = 6;
             this.BtnRandevuAl.Text = "RandevuAl";
             this.BtnRandevuAl.UseVisualStyleBackColor = true;
+            this.BtnRandevuAl.Click += new System.EventHandler(this.BtnRandevuAl_Click);
             // 
             // RchSikayet
             // 
@@ -242,22 +261,7 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(829, 210);
             this.dataGridView2.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 46);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 24);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Id:";
-            // 
-            // TxtId
-            // 
-            this.TxtId.Location = new System.Drawing.Point(86, 47);
-            this.TxtId.Name = "TxtId";
-            this.TxtId.Size = new System.Drawing.Size(160, 32);
-            this.TxtId.TabIndex = 9;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // FrmHastaDetay
             // 
@@ -270,9 +274,10 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmHastaDetay";
-            this.Text = "FrmHastaDetay";
+            this.Text = "Hasta Detay";
             this.Load += new System.EventHandler(this.FrmHastaDetay_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

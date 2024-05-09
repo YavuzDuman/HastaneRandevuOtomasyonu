@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBransPaneli));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.TxtSoyad = new System.Windows.Forms.TextBox();
             this.TxtAd = new System.Windows.Forms.TextBox();
+            this.TxtId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnGuncelle = new System.Windows.Forms.Button();
@@ -41,27 +42,29 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(282, 35);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(280, 170);
+            this.dataGridView1.Size = new System.Drawing.Size(419, 170);
             this.dataGridView1.TabIndex = 18;
-            // 
-            // TxtSoyad
-            // 
-            this.TxtSoyad.Location = new System.Drawing.Point(112, 83);
-            this.TxtSoyad.Name = "TxtSoyad";
-            this.TxtSoyad.Size = new System.Drawing.Size(144, 32);
-            this.TxtSoyad.TabIndex = 17;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // TxtAd
             // 
-            this.TxtAd.Location = new System.Drawing.Point(112, 35);
+            this.TxtAd.Location = new System.Drawing.Point(112, 83);
             this.TxtAd.Name = "TxtAd";
             this.TxtAd.Size = new System.Drawing.Size(144, 32);
-            this.TxtAd.TabIndex = 16;
+            this.TxtAd.TabIndex = 17;
+            // 
+            // TxtId
+            // 
+            this.TxtId.Location = new System.Drawing.Point(112, 35);
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Size = new System.Drawing.Size(144, 32);
+            this.TxtId.TabIndex = 16;
             // 
             // label2
             // 
@@ -89,6 +92,7 @@
             this.BtnGuncelle.TabIndex = 21;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // BtnSil
             // 
@@ -98,6 +102,7 @@
             this.BtnSil.TabIndex = 20;
             this.BtnSil.Text = "Sil";
             this.BtnSil.UseVisualStyleBackColor = true;
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // BtnEkle
             // 
@@ -108,24 +113,30 @@
             this.BtnEkle.TabIndex = 19;
             this.BtnEkle.Text = "Ekle";
             this.BtnEkle.UseVisualStyleBackColor = false;
+            this.BtnEkle.Click += new System.EventHandler(this.BtnEkle_Click);
             // 
             // FrmBransPaneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(583, 235);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.SeaGreen;
+            this.ClientSize = new System.Drawing.Size(706, 235);
             this.Controls.Add(this.BtnGuncelle);
             this.Controls.Add(this.BtnSil);
             this.Controls.Add(this.BtnEkle);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.TxtSoyad);
             this.Controls.Add(this.TxtAd);
+            this.Controls.Add(this.TxtId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "FrmBransPaneli";
-            this.Text = "FrmBransPaneli";
+            this.Text = "Brans Paneli";
+            this.Load += new System.EventHandler(this.FrmBransPaneli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,8 +146,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox TxtSoyad;
         private System.Windows.Forms.TextBox TxtAd;
+        private System.Windows.Forms.TextBox TxtId;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnGuncelle;

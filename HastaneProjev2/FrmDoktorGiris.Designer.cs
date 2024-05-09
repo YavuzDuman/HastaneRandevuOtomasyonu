@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorGiris));
             this.BtnGirisYap = new System.Windows.Forms.Button();
             this.TxtSifre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,13 +39,14 @@
             // 
             // BtnGirisYap
             // 
-            this.BtnGirisYap.Location = new System.Drawing.Point(211, 181);
+            this.BtnGirisYap.Location = new System.Drawing.Point(187, 181);
             this.BtnGirisYap.Margin = new System.Windows.Forms.Padding(4);
             this.BtnGirisYap.Name = "BtnGirisYap";
             this.BtnGirisYap.Size = new System.Drawing.Size(93, 30);
             this.BtnGirisYap.TabIndex = 13;
             this.BtnGirisYap.Text = "Giriş Yap";
             this.BtnGirisYap.UseVisualStyleBackColor = true;
+            this.BtnGirisYap.Click += new System.EventHandler(this.BtnGirisYap_Click);
             // 
             // TxtSifre
             // 
@@ -53,6 +55,7 @@
             this.TxtSifre.Name = "TxtSifre";
             this.TxtSifre.Size = new System.Drawing.Size(136, 32);
             this.TxtSifre.TabIndex = 11;
+            this.TxtSifre.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -97,8 +100,10 @@
             // 
             // FrmDoktorGiris
             // 
+            this.AcceptButton = this.BtnGirisYap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(391, 266);
             this.Controls.Add(this.BtnGirisYap);
@@ -108,9 +113,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "FrmDoktorGiris";
-            this.Text = "FrmDoktorGiris";
+            this.Text = "Doktor Giriş";
             this.ResumeLayout(false);
             this.PerformLayout();
 
