@@ -37,5 +37,10 @@ namespace HastaneProjev2
             fr.Show();
             this.Hide();
         }
-    }
+
+		private void FrmGirisler_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
